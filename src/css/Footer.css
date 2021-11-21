@@ -1,0 +1,32 @@
+footer{
+    padding: 20px;
+    width: 100%;
+    padding: 60px;
+    display: flex;
+    background: var(--text-dark);
+    flex-direction: column;
+}
+footer img{
+    width: 200px;
+    margin-bottom: 10px;
+    background: white;
+    padding: 10px 15px;
+}
+footer p{
+    text-align: justify;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--text-light);
+}
+footer p:nth-of-type(2){
+    font-family: 'Montserrat', sans-serif;
+    color: var(--bg-main);
+}
+@media only screen and (max-width:500px){
+    footer{
+        align-items: center;
+    }
+    footer img{
+        width: 100%;
+    }
+}

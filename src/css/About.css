@@ -1,0 +1,145 @@
+.about *{
+    transition: all ease-in-out 0.3s;
+}
+.about{
+    width: 100%;
+}
+.about .virtual-view{
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.521),rgba(0, 0, 0, 0.541)),
+    url(../images/6531f7122894a60a9ff91ea34917e5a4.jpg) no-repeat center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about .virtual-view img{
+    height: 30%;
+    cursor: pointer;
+}
+.about .virtual-view p{
+    font-weight: 800;
+    color: var(--bg-light);
+    font-size: clamp(16px,5vw,24px);
+}
+.about .virtual-view p:first-of-type{
+    color: var(--bg-main);
+    font-family: 'Montserrat', sans-serif;
+}
+.about .satisfaction{
+    width: 100%;
+    height: 120px;
+    background: var(--bg-main);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about .satisfaction .statis-card{
+    display: flex;
+}
+.about .satisfaction .statis-card h1{
+    font-size: 70px;
+    color: var(--text-light);
+}
+.about .satisfaction .statis-card div{
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    justify-content: center;
+}
+.about .satisfaction .statis-card div p{
+    color: var(--text-light);
+    font-size: 20px;
+}
+.about .about-words{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about .about-words img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 35px;
+}
+.about .about-words div{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+.about .about-words div p{
+    text-align: justify;
+    font-size: 18px;
+    color: var(--text-dark);
+    position: relative;
+}
+.about .about-words div p:first-of-type::before{
+    content: attr(data-icon);
+    position: absolute;
+    font-size: 55px;
+    color: var(--bg-main);
+    left: -35px;
+    top: -25px;
+}
+.about .about-words div span{
+    font-size: 16px;
+    margin: 5px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: var(--bg-main);
+}
+.about .about-words div p:last-of-type{
+    font-size: 16px;
+}
+@media only screen and (max-width:1200px){
+    .about .satisfaction .statis-card h1{
+        font-size: 45px;
+    }
+    .about .satisfaction .statis-card div p{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width:850px){
+    .about .about-words{
+        height: fit-content;
+        padding: 45px 15px;
+    }
+    .about .satisfaction{
+        height:fit-content;
+        flex-wrap: wrap;
+        padding: 30px;
+    }
+    .about .satisfaction .statis-card{
+        width: 250px;
+        margin: 10px;
+    }
+}
+@media only screen and (max-width:700px){
+    .about .virtual-view{
+        height: 60vh;
+    }
+    .about .about-words{
+        flex-direction: column;
+    }
+    .about .about-words img{
+        margin-bottom: 20px;
+    }
+    .about .about-words div{
+        width: 80vw;
+    }
+}
+@media only screen and (max-width:450px){
+    .about .about-words img{
+        width: 150px;
+        height: 150px;
+        margin-bottom: 25px;
+    }
+    .about .about-words div{
+        width: 70vw;
+    }
+}

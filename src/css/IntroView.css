@@ -1,0 +1,130 @@
+.intro-view *{
+    transition: all ease-in-out 0.2s;
+}
+.intro-view{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    gap: 40px;
+    padding: 45px;
+    background: var(--bg-light);
+}
+.intro-view .intro-pics{
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 10px;
+    height: 100%;
+    padding: 10px 40px;
+    grid-template-areas: "img1 img2" "img1 img3";
+}
+.intro-view .intro-pics img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.intro-view .intro-details{
+    width: 50%;
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.intro-view .intro-details img{
+    height: 30%;
+}
+.intro-view .intro-details h1{
+    font-size: clamp(18px,8vw,35px);
+    color: var(--bg-dark);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+.intro-view .intro-details p{
+    font-size: clamp(16px,10vw,20px);
+    color: rgb(100, 100, 100);
+    text-align: justify;
+    margin-bottom: 20px;
+}
+.intro-view .intro-details button{
+    padding: 15px 25px;
+    outline: none;
+    border: none;
+    background: var(--bg-main);
+    color: var(--text-light);
+    box-shadow: rgba(0, 0, 0, 0.185) 0px 0px 15px;
+}
+.intro-view .intro-details button:active{
+    transform: scale(0.9);
+}
+@media only screen and (max-width:1300px){
+    .intro-view{
+        height: 90vh;
+    }
+    .intro-view .intro-pics{
+        padding:0px;
+    }
+    .intro-view .intro-details{
+        padding: 0px;
+    }
+}
+@media only screen and (max-width:1200px){
+    .intro-view .intro-pics{
+        width: 60%;
+    }
+    .intro-view .intro-details{
+        width: 40%;
+    }
+    .intro-view .intro-details img{
+        height: 20%;
+    }
+    .intro-view .intro-details p{
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width:950px){
+    .intro-view{
+        gap: 25px;
+        align-items: center;
+        padding: 25px;
+    }
+    .intro-view .intro-pics{
+        width: 60%;
+        height: 80%;
+    }
+    .intro-view .intro-details{
+        width: 40%;
+    }
+}
+@media only screen and (max-width:850px){
+    .intro-view{
+        gap: 20px;
+        padding: 20px;
+    }
+    .intro-view .intro-pics{
+        width: 60%;
+        height: 75%;
+    }
+}
+@media only screen and (max-width:750px){
+    .intro-view{
+        gap:30px;
+        padding: 30px;
+        height: fit-content;
+        flex-direction: column;
+    }
+    .intro-view .intro-pics{
+        width: 100%;
+    }
+    .intro-view .intro-details{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:500px){
+    .intro-view .intro-details img{
+        height: 120px;
+    }
+}

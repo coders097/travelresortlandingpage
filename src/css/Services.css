@@ -1,0 +1,77 @@
+.services{
+    width: 100%;
+    height: 40vh;
+    background: var(--bg-dark);
+    padding: 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.services>div{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+.services>div h2{
+    font-size: clamp(20px,5vw,24px);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+.services>div p{
+    font-size: clamp(14px,5vw,18px);
+    color: var(--bg-dim);
+    margin-bottom: 10px;
+    font-weight: 300;
+    text-align: justify;
+}
+.services>div a{
+    color: var(--bg-main);
+}
+.services .service-card{
+    align-items: center;
+}
+.services .service-card p:first-of-type{
+    font-size: clamp(26px,10vw,40px);
+}
+@media only screen and (max-width:1150px){
+    .services{
+        padding: 15px;
+        height: fit-content;
+    }
+    .services>div h2{
+        font-size: clamp(16px,5vw,20px);
+        margin-bottom: 5px;
+    }
+    .services .service-card {
+        width: 23%;
+    }
+    .services .service-card h2{
+        text-align: center;
+    }
+    .services>div p{
+        font-size: clamp(14px,5vw,18px);
+        color: var(--bg-dim);
+        margin-bottom: 5px;
+        text-align: justify;
+    }
+    .services .service-card p{
+        text-align: center;
+    }
+}
+@media only screen and (max-width:650px){
+    .services{
+        flex-wrap: wrap;
+    }
+    .services>div:first-of-type{
+        width: 85vw;
+        align-items: center;
+    }
+    .services>div p{
+        text-align: center;
+    }
+    .services .service-card{
+        width: 85vw;
+        margin: 10px;
+    }
+}

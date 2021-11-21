@@ -1,0 +1,124 @@
+.rooms *{
+    transition: all ease-in-out 0.3s;
+}
+.rooms{
+    width: 100%;
+    padding: 15px;
+    background: var(--bg-dark);
+    display: flex;
+    flex-direction: column;
+}
+.rooms .room-heading{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.rooms .room-heading div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.rooms .room-heading div h1{
+    font-size: clamp(18px,10vw,34px);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-light);
+}
+.rooms .room-heading div h1 span{
+    color: var(--bg-main);
+    font-size: clamp(18px,10vw,34px);
+}
+.rooms .room-heading div p{
+    font-size: clamp(16px,5vw,18px);
+    color: var(--bg-dim);
+}
+.rooms .room-heading button{
+    margin-left: 10px;
+    padding: 10px 25px;
+    font-size: clamp(16px,5vw,20px);
+    background: var(--bg-light);
+    color: var(--text-dark);
+    outline: none;
+    border: none;
+}
+.rooms .room-heading button:hover{
+    background: var(--bg-main);
+    color: var(--text-light);
+}
+.rooms .room-heading button:active{
+    transform: scale(0.9);
+}
+.rooms .room-view{
+    padding: 40px 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.rooms .room-view .room-card{
+    width: 300px;
+    margin: 20px;
+    margin-top: 0px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    background: var(--bg-light);
+}
+.rooms .room-view .room-card img{
+    width: 100%;
+    object-fit: cover;
+    height: 60%;
+}
+.rooms .room-view .room-card .room-details{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.rooms .room-view .room-card .room-details div{
+    display: flex;
+    flex-direction: column;
+}
+.rooms .room-view .room-card .room-details div p:first-of-type{
+    font-size: clamp(18px,8vw,26px);
+    text-transform: capitalize;
+    color: var(--text-dark);
+    font-family: 'Montserrat', sans-serif;
+}
+.rooms .room-view .room-card .room-details div p:last-of-type{
+    font-size: clamp(16px,4vw,20px);
+    color: rgb(116, 116, 116);
+    text-transform: uppercase;
+}
+.rooms .room-view .room-card .room-details div:last-of-type{
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+.rooms .room-view .room-card .room-details div:last-of-type p{
+    font-size: 20px;
+    color: var(--text-dark);
+}
+.rooms .room-view .room-card .room-details div:last-of-type p span{
+    font-size: 18px;
+    color: rgb(116, 116, 116);
+}
+.rooms .room-view .room-card .room-details div:last-of-type button{
+    padding: 10px 15px;
+    outline: none;
+    border: none;
+    background: var(--bg-main);
+    color: var(--text-light);
+}
+.rooms .room-view .room-card .room-details div:last-of-type button:active{
+    transform:scale(0.9);
+}
+@media only screen and (max-width:700px){
+    .rooms .room-heading{
+        margin-top: 20px;
+    }
+    .rooms .room-view .room-card{
+        width: 500px;
+    }
+}

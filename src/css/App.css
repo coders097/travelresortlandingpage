@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Open+Sans:wght@300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 16px;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Open Sans', sans-serif;
+}
+p{
+    cursor: default;
+}
+img{
+    user-select: none;
+    pointer-events: none;
+}
+h1,h2,h3,h4,h5,h6 {
+    cursor: default;
+}
+:root{
+    --bg-light:rgb(248, 246, 246);
+    --bg-dark:rgb(68, 66, 66);
+    --bg-main:rgb(255, 176, 5);
+    --bg-dim:rgb(235, 235, 235);
+    --text-light:white;
+    --text-dim:rgb(211, 211, 211);
+    --text-dark:rgb(34, 31, 31);
+}
+body::-webkit-scrollbar{
+    width: 6px;
+}
+body::-webkit-scrollbar-track{
+    background: var(--bg-dark);
+}
+body::-webkit-scrollbar-thumb{
+    background: var(--bg-light);
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:active{
+    background: var(--bg-main);
+}
+.loading-screen{
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: all ease-in-out 0.4s;
+    position: fixed;
+    background: var(--bg-dark);
+    z-index: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading-screen .loader{
+    border: 7px solid transparent;
+    border-top: 7px solid var(--bg-main);
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    transition: all ease-in-out;
+    animation: spin 1s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading-screen .loader img{
+    width: 40px;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg) ;
+    }
+    100%{
+        transform: rotate(360deg) ;
+    }
+}

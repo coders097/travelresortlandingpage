@@ -1,0 +1,109 @@
+.blog *{
+    transition: all ease-in-out 0.3s;
+}
+.blog{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.blog>h1{
+    width: 100%;
+    text-align: center;
+    font-size: clamp(16px,10vw,40px);
+    font-family: 'Montserrat', sans-serif;
+    color: var(--bg-dark);
+    padding: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.blog>h1::before{
+    content: "";
+    position: absolute;
+    width: 20%;
+    background: var(--bg-main);
+    height: 4.5px;
+    border-radius: 10px;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.blog .blog-view{
+    width: 100%;
+    display: flex;
+    padding: 30px 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.blog .blog-view .blog-card{
+    height: 450px;
+    width: 350px;
+    overflow: hidden;
+    margin: 5px 15px;
+    position: relative;
+}
+.blog .blog-view .blog-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.blog .blog-view .blog-card .blog-details{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 0),rgba(0, 89, 255, 0.404));
+}
+.blog .blog-view .blog-card .blog-details h2{
+    color: var(--bg-light);
+    font-size: clamp(16px,8vw,26px);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+}
+.blog .blog-view .blog-card .blog-details p:first-of-type{
+    color: var(--bg-dim);
+    font-size: clamp(16px,5vw,18px);
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: solid none 1px;
+}
+.blog .blog-view .blog-card .blog-details p:last-of-type{
+    color: var(--bg-dim);
+    font-size: clamp(14px,4vw,18px);
+    height: 0%;
+    opacity: 0;
+    text-align: justify;
+}
+.blog .blog-view .blog-card .blog-details p:last-of-type::-webkit-scrollbar{
+    display: none;
+}
+.blog .blog-view .blog-card .blog-details:hover > p:last-of-type{
+    height: 100px;
+    overflow: scroll;
+    opacity: 1;
+}
+.blog .blog-view .blog-card .blog-details:hover >p:first-of-type{
+    border-bottom: solid var(--bg-light) 1px;
+}
+@media only screen and (max-width:800px){
+    .blog .blog-view .blog-card{
+        height: 400px;
+        width: 300px;
+    }
+}
+@media only screen and (max-width:700px){
+    .blog .blog-view .blog-card{
+        height: 350px;
+        width: 250px;
+    }
+}
+@media only screen and (max-width:600px){
+    .blog .blog-view .blog-card{
+        height: 350px;
+        width: 90vw;
+    }
+}
